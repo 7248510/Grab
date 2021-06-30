@@ -10,16 +10,18 @@ int linuxInstall(const char *passedProgram)
 
     char test1[] = "sudo apt-get install git -y";
     system(test1);
-
+    /*
     if (execl(shellPath,programmingLanguage, NULL) != 0) {
         printf("FAIL");
         return EXIT_FAILURE;
     }; 
+    */
+    return 0;
 }
 
-int launchLinux() {
+int launch() {
     const char *gPlusPlus = "sudo apt get install git -y";
-    linuxInstall(gPlusPlus);
+    launch(gPlusPlus);
 }
 void talk()
 {
