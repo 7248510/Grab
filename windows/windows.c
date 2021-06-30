@@ -12,11 +12,16 @@ int curlGrab()
     char *linkBuf = fgets(link, length, stdin);
     if (linkBuf == NULL || feof(stdin) == EOF) { //if the input buffer is equal to a null pointer or the file stream is equal to End-of-file.
         int errorCode = feof(stdin); //stdin is a file stream
-        if (printf("Error code: %d", errorCode) < 0);
-        if (printf("\nNull character entered.") < 0);
+        if (printf("Error code: %d", errorCode) < 0) {return EXIT_FAILURE;};
+        if (printf("\nNull character entered.") < 0) {return EXIT_FAILURE;};
         statusTracker = EXIT_FAILURE; //change the status and return with an error code
         return EXIT_FAILURE; //ERROR OCCURRED
     };
-    if (printf(linkBuf) < 0);
+    if (printf(linkBuf) < 0) {return EXIT_FAILURE;};
+    //curl -x linkBuf
+    //Createprocess or system.
     return statusTracker;
+}
+void launch() {
+    return;
 }
