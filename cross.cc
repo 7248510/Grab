@@ -2,7 +2,7 @@
 //Operating system independent functions.
 int welcome() 
 {
-    if(puts("Welcome to Grab") == EOF) {
+    if(puts("Welcome to Initial") == EOF) {
         return EXIT_FAILURE;
     };
     return EXIT_SUCCESS;
@@ -31,6 +31,9 @@ void arguments(int argc, char** argv)
             std::cout << "Help options" << std::endl;
             std::cout << "To set up a Windows environment use the -w flag" << std::endl;
             std::cout << "To set up a Linux environment use the -l flag";
+        }
+        if (helpCompare == linux) {
+            //Input Linux options
         }
         if (helpCompare == windows) {
             std::cout << "Enter the Windows build you'd like" << std::endl;
