@@ -18,8 +18,9 @@ int curlGrab()
         return EXIT_FAILURE; //ERROR OCCURRED
     };
     if (printf(linkBuf) < 0) {return EXIT_FAILURE;};
-    //curl -x linkBuf
+    //curl -o linkBuf
     //Createprocess or system.
+    //Modify downloadProc so a user can enter a URL/Create another function similar to download proc.
     return statusTracker;
 }
 void launch() {
