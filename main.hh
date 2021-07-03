@@ -1,6 +1,6 @@
 //Core header files
 //-Wextra = extra warning flags
-#include <iostream>
+#include <iostream> //C++
 #include <stdio.h> //C
 #include <stdlib.h> //C
 #include <string.h> //C
@@ -14,5 +14,5 @@
 #endif
 #if __linux__
     #include "linux/linux.c" 
-    #include "cross.c"
+    #include "cross.cc"
 #endif

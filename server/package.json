@@ -1,0 +1,16 @@
+{
+  "name": "serve",
+  "version": "1.0.0",
+  "description": "Serve files for Initial",
+  "main": "serve.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serve-index": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caleb K",
+  "license": "ISC"
+}
