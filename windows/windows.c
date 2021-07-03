@@ -1,4 +1,7 @@
+
 //cl /EHsc /TC /W4 /sdl initial.c
+//WIP currently I am not working on this function of Initial. 
+/*
 int curlGrab()
 {
     int statusTracker = 0; //by default the program will return a valid status
@@ -23,6 +26,32 @@ int curlGrab()
     //Modify downloadProc so a user can enter a URL/Create another function similar to download proc.
     return statusTracker;
 }
-void launch() {
-    return;
+*/
+
+int launch(int key) {
+    int status = 0;
+    //Because I'm passing a value a check on printf is needed.
+    if (printf("Build key: %d\n", key) < 0)
+    {
+        status = EXIT_FAILURE;
+        return status;
+    }
+    if (key == 1) {
+        struct cyber build;
+        build.cyberInit();
+    }
+    if (key == 2) {
+        struct dev build;
+        build.devInit();
+    }
+    if (key == 3) {
+        struct internet build;
+        build.internetInit();
+    }
+    if (key == 4) {
+        struct all build;
+        build.allInit();
+    }
+    
+    return status;
 }

@@ -5,4 +5,5 @@
 //https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/fgets-fgetws?view=msvc-160
 //https://www.ibm.com/docs/en/i/7.4?topic=functions-fgets-read-string
 //Effective C
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
