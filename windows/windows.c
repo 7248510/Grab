@@ -52,6 +52,9 @@ int launch(int key) {
         struct all build;
         build.allInit();
     }
-    
+    if (key == 5) {
+        struct initRemove removeMe;
+        removeMe.removePassword();
+    }
     return status;
 }

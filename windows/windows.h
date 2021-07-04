@@ -6,4 +6,9 @@
 //https://www.ibm.com/docs/en/i/7.4?topic=functions-fgets-read-string
 //Effective C
 #define WIN32_LEAN_AND_MEAN
+//Define WIN32_LEAN_AND_MEAN to exclude APIs such as Cryptography, DDE, RPC, Shell, and Windows Sockets.
+//^MSDN
 #include <windows.h>
+#pragma comment(lib, "netapi32.lib") 
+//NetUserChangePassword
+#include <lmaccess.h> //nstatus
