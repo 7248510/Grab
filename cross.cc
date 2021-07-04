@@ -42,6 +42,7 @@ void arguments(int argc, char** argv)
             std::cout << "2. Download development tools\nIncludes: Visual Studio Code, Visual studio's Installer, GIT" << std::endl;
             std::cout << "3. Download internet tools\nIncludes: FireFox, Chrome, Node, Python, Visual Studio's Installer" << std::endl;
             std::cout << "4. Download all of the above." << std::endl;
+            std::cout << "5. Remove the initial password from the Windows 10 VM" << std::endl;
             std::cin >> choice;
             if (choice == "1") {
                  std::cout << "Cyber security build selected" << std::endl;
@@ -59,11 +60,19 @@ void arguments(int argc, char** argv)
                 std::cout << "All of the above selected" << std::endl;
                 launch(4);
             }
-            if (choice != "1" && choice != "2" && choice != "3" && choice != "4") { 
+            if (choice == "5") {
+                std::cout << "Removing password:" << std::endl;
+                launch(5);
+            }
+            if (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5") { 
                 //Currently their are 4 build options in this program. If choice is != to one of the four(may be more || less on Linux)
                 printf("Invalid build terminating program.");
                 exit(EXIT_FAILURE);
             }               
+        }
+        if (helpCompare != windows || helpCompare != linux) {
+            std::cout << "Unknown argument." << std::endl; std::cout << "Terminating program.";
+            exit(EXIT_FAILURE);
         }
     }
 }
