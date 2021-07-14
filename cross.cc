@@ -1,4 +1,4 @@
-//cl /EHsc /sdl /W4 main.c
+//cl /EHsc /sdl /W4 main.cc
 //Operating system independent functions.
 int welcome() 
 {
@@ -47,32 +47,38 @@ void arguments(int argc, char** argv)
             if (choice == "1") {
                  std::cout << "Cyber security build selected" << std::endl;
                  launch(1);
+                 return;
             }
             if (choice == "2") {
                 std::cout << "Development build selected" << std::endl;
                 launch(2);
+                return;
             }
             if (choice == "3") {
             std::cout << "Internet tools/Web Dev selected" << std::endl;
                 launch(3);
+                return;
             }
             if (choice == "4") {
                 std::cout << "All of the above selected" << std::endl;
                 launch(4);
+                return;
             }
             if (choice == "5") {
                 std::cout << "Removing password:" << std::endl;
                 launch(5);
+                return;
             }
             if (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5") { 
                 //Currently their are 4 build options in this program. If choice is != to one of the four(may be more || less on Linux)
                 printf("Invalid build terminating program.");
                 exit(EXIT_FAILURE);
-            }               
-        }
-        if (helpCompare != windows || helpCompare != linux) {
-            std::cout << "Unknown argument." << std::endl; std::cout << "Terminating program.";
-            exit(EXIT_FAILURE);
+            }  
+            if (helpCompare != windows || helpCompare != linux) {
+                std::cout << "Unknown argument." << std::endl; 
+                std::cout << "Terminating program.";
+                exit(EXIT_FAILURE);
+            }          
         }
     }
 }
