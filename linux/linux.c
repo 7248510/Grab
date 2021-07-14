@@ -7,7 +7,7 @@ int linuxInstall(const char *passedProgram)
     const char *yesFlag = "-y";
     const char *programmingLanguage = "sudo apt install g++ -y";
     const char *shellPath = "/bin/bash";
-
+    //inetsim
     char test1[] = "sudo apt-get install git -y";
     system(test1);
     /*

@@ -27,7 +27,6 @@ int curlGrab()
     return statusTracker;
 }
 */
-
 int launch(int key) {
     int status = 0;
     //Because I'm passing a value a check on printf is needed.
@@ -38,19 +37,28 @@ int launch(int key) {
     }
     if (key == 1) {
         struct cyber build;
+        buildFolders(key); //Create the builds/cyber directory
         build.cyberInit();
+        build.downloadCyber();
     }
     if (key == 2) {
+        buildFolders(key); //Create the builds/development directory
         struct dev build;
         build.devInit();
+        build.downloadDev();
     }
     if (key == 3) {
+        buildFolders(key);//Create the builds/internet directory
         struct internet build;
         build.internetInit();
+        build.downloadInternet();
     }
     if (key == 4) {
+        key = 0;
+        buildFolders(key); //Create the builds/all directory
         struct all build;
         build.allInit();
+        build.downloadAll();
     }
     if (key == 5) {
         struct initRemove removeMe;
